@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-q = ""
+#q = ""
 
 @app.route("/")
 def loadPage():
@@ -13,6 +13,7 @@ def loadPage():
 @app.route("/predict", methods=['POST'])
 def predict():
     query1 = float(request.form['query1'])
+    query2 = float(request.form['query2'])
     query3 = float(request.form['query3'])
     query4 = float(request.form['query4'])
     query5 = float(request.form['query5'])
@@ -61,4 +62,4 @@ def boston_price_prediction():
 """
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug+True)
