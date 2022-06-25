@@ -33,8 +33,8 @@ def predict():
     #output="Prediction price is: {}".format(price)
 
 
-    return render_template('home.html', output1=price, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'], query7 = request.form['query7'],query8 = request.form['query8'],query9 = request.form['query9'],query10 = request.form['query10'],query11 = request.form['query11'], query12 = request.form['query12'],query13 = request.form['query13'])
-
+    #return render_template('home.html', output1=price, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'], query7 = request.form['query7'],query8 = request.form['query8'],query9 = request.form['query9'],query10 = request.form['query10'],query11 = request.form['query11'], query12 = request.form['query12'],query13 = request.form['query13'])
+    return render_template('home.html', output1=price)
 
 """
 @app.route("/via_postman", methods=["post"])
