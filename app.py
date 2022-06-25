@@ -10,7 +10,7 @@ q = ""
 def loadPage():
 	return render_template('home.html', query="")
 
-@app.route("/", methods=['POST'])
+@app.route("/predict", methods=['POST'])
 def predict():
     query1 = float(request.form['query1'])
     query3 = float(request.form['query3'])
