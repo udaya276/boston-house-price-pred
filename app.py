@@ -61,5 +61,5 @@ def boston_price_prediction():
         return(jsonify(float(price)))
 
 """
-
-app.run()
+if __name__=="__main__":
+    app.run()
