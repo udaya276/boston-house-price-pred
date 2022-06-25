@@ -10,8 +10,8 @@ q = ""
 def loadPage():
 	return render_template('home.html', query="")
 
-@app.route("/", methods=['POST'])
-def PricePrediction():
+@app.route("/predict", methods=['POST'])
+def predict():
     query1 = request.form['query1']
     query2 = request.form['query2']
     query3 = request.form['query3']
