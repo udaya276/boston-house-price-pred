@@ -12,19 +12,18 @@ def loadPage():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    query1 = request.form['query1']
-    query2 = request.form['query2']
-    query3 = request.form['query3']
-    query4 = request.form['query4']
-    query5 = request.form['query5']
-    query6 = request.form['query6']
-    query7 = request.form['query7']
-    query8 = request.form['query8']
-    query9 = request.form['query9']
-    query10 = request.form['query10']
-    query11 = request.form['query11']
-    query12 = request.form['query12']
-    query13 = request.form['query13']
+    query1 = float(request.form['query1'])
+    query3 = float(request.form['query3'])
+    query4 = float(request.form['query4'])
+    query5 = float(request.form['query5'])
+    query6 = float(request.form['query6'])
+    query7 = float(request.form['query7'])
+    query8 = float(request.form['query8'])
+    query9 = float(request.form['query9'])
+    query10 = float(request.form['query10'])
+    query11 = float(request.form['query11'])
+    query12 = float(request.form['query12'])
+    query13 = float(request.form['query13'])
 
     data  = [[query6,query13]]
     new_df = pd.DataFrame(data)
@@ -36,7 +35,7 @@ def predict():
     return render_template('home.html', output1=output, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'], query7 = request.form['query7'],query8 = request.form['query8'],query9 = request.form['query9'],query10 = request.form['query10'],query11 = request.form['query11'], query12 = request.form['query12'],query13 = request.form['query13'])
 
 
-"""
+
 @app.route("/via_postman", methods=["post"])
 def boston_price_prediction():
     if (request.method=='POST'):
@@ -60,6 +59,6 @@ def boston_price_prediction():
         price = model.predict(new_df)
         return(jsonify(float(price)))
 
-"""
+
 if __name__=="__main__":
     app.run()
