@@ -4,11 +4,11 @@ import pickle
 
 app = Flask(__name__)
 
-#q = ""
+q = ""
 
 @app.route("/")
 def loadPage():
-	return render_template('home.html')
+	return render_template('home.html', query="")
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -62,5 +62,5 @@ def boston_price_prediction():
         return(jsonify(float(price)))
 """
 
-if __name__== "__main__":
+if __name__ == "__main__":
     app.run(debug=True)
