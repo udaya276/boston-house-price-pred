@@ -29,7 +29,8 @@ def predict():
     data  = [[query6,query13]]
     new_df = pd.DataFrame(data)
     model = pickle.load(open("model1.sav", "rb"))
-    price = float(model.predict(new_df))
+    pr = model.predict(new_df)
+    price = float(pr)
     #output="Prediction price is: {}".format(price)
 
 
